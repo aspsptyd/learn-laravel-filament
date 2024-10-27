@@ -23,7 +23,9 @@ class CustomersResource extends Resource
     {
         return $form
             ->schema([
-                //
+                Forms\Components\TextInput::make('nama'),
+                Forms\Components\TextInput::make('no_hp'),
+                Forms\Components\TextInput::make('alamat'),
             ]);
     }
 
@@ -31,7 +33,10 @@ class CustomersResource extends Resource
     {
         return $table
             ->columns([
-                //
+                Tables\Columns\TextColumn::make('nama'),
+                Tables\Columns\TextColumn::make('no_hp'),
+                Tables\Columns\TextColumn::make('alamat'),
+                Tables\Columns\TextColumn::make('created_at'),
             ])
             ->filters([
                 //
